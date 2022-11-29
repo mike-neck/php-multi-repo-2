@@ -1,0 +1,14 @@
+name: call echo Makefile
+on:
+  push: {}
+  workflow_dispatch: {}
+jobs:
+  run-echo:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v3
+        name: check out
+      - name: run echo
+        run: make
+
